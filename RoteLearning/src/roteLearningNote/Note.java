@@ -48,7 +48,7 @@ public class Note extends JFrame implements ActionListener{
 	protected MyJTextArea mainProblemText = new MyJTextArea(HEIGHTP,WIDTH);
 	protected MyJTextArea mainAnswerText = new MyJTextArea(HEIGHTA,WIDTH);
 	
-	private String[][] allProblemTableText = {{"hoge","piyo","fuga"}};;
+	private String[][] allProblemTableText = {};;
 	private String[] columnName = {"問題番号","問題","答え"};
 	protected  DefaultTableModel allProblemTableModel
      = new DefaultTableModel(allProblemTableText, columnName );
