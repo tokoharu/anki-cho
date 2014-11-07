@@ -2,6 +2,7 @@ package roteLearningNote;
 
 //import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
 //import java.io.FileReader;
 import java.io.FileWriter;
@@ -9,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+
+import javax.swing.JFileChooser;
 
 import com.google.gson.*;
 //import com.google.gson.annotations.*;
@@ -29,7 +32,18 @@ public class Model {
 	public void saveState() {
 
 		try{
-			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(note.inputFile)));
+			File outputFile = note.inputFile;
+			// if inputfile == null, no file opened
+			if (outputFile == null) {
+				JFileChooser filechooser = new JFileChooser(System.getProperty("user.home"));
+				int selected = filechooser.showOpenDialog(note);
+				if (selected == JFileChooser.APPROVE_OPTION){
+					outputFile = filechooser.getSelectedFile();
+				} else {
+					return;
+				}
+			}
+			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputFile)));
 
 			Gson gson = new Gson();
 			
@@ -37,7 +51,8 @@ public class Model {
 			writer.println(gson.toJson(note.tags));
 			
 			writer.close();
-			System.out.println("Save to " + note.inputFile.getName());
+			System.out.println("Save to " + outputFile.getName());
+			note.inputFile = outputFile;
 		}
 		catch(IOException e) {
 			System.out.println(e.getMessage());
@@ -161,7 +176,6 @@ public class Model {
 		note.mainProblemText.setText(note.problemset.get(note.problemNum).getProblem());
 		note.mainAnswerText.setText("");
 	}
-	
 	
 	
 	public void printNext() {
