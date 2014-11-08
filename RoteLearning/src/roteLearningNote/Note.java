@@ -26,15 +26,13 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
-/*TODO
-全体的にfieldを少なくするためにも内部クラスをつくろう
 
 */
 public class Note extends JFrame implements ActionListener{
 
 	File inputFile;
 	
-	private static final long serialVersionUID = 1L;//よくわからないけどつけた
+	private static final long serialVersionUID = 1L;//意味をよくわかってないけどつけた
 	static final int WIDTH = 60;
 	static final int HEIGHTP = 10;
 	static final int HEIGHTA = 18;
