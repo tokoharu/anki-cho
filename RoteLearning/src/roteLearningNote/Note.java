@@ -27,7 +27,7 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
 
-*/
+
 public class Note extends JFrame implements ActionListener{
 
 	File inputFile;
