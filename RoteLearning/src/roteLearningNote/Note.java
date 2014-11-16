@@ -30,6 +30,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 
 public class Note extends JFrame implements ActionListener{
 
+
 	File inputFile;
 	
 	private static final long serialVersionUID = 1L;//意味をよくわかってないけどつけた
