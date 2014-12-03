@@ -13,16 +13,17 @@
 ##使い方
 
 ### 例の紹介
-1. java -jar RoteLearning.jar で起動
+1. java -jar RoteLearning.jar などをして起動
 
 2. Fileボタンを押し、 ankicho-example.inを選択
 
 3. Nextボタンを押す。もしくはAllProblemタブを押す。
-作成者が実際に作ったページを見ることができます。
+
+面白そうな問題とその解説を読むことができます
 
 
 ### 新規ファイルの作り方
-1. java -jar RoteLearning.jar  をすると起動
+1. java -jar RoteLearning.jar  で起動
 
 2. ankicho-init.inを別のところにコピーして、付けたい名前をつけます
 
@@ -47,9 +48,6 @@ edit page : all problems ページで選択されている問題を編集する�
 
 all problems : 問題一覧。 change posで問題の順序を変えることが出来ます(挿入形式です)
 
-## ankicho-example
-
-サンプルです。面白そうな問題or知識を少し入れました。
 
 ## その他
 
@@ -73,4 +71,4 @@ all problems : 問題一覧。 change posで問題の順序を変えることが
 
   あると便利だと思いますが作ってないです
   
-  今まではgrepで対処してしまっていた
+  今まではgrepで対処してしまっていた（が、よく考えると今のバージョンだとできない…）
